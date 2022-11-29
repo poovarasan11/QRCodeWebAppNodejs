@@ -20,9 +20,9 @@ app.get('/', (req, res, next) => {
 
 app.post('/scan', (req, res, next) => {
     const input_text = req.body.text;
-   
+
     qrcode.toDataURL(input_text, (err, src) => {
-       
+
         res.render('scan', {
             qr_code: src,
         })
@@ -32,4 +32,4 @@ app.post('/scan', (req, res, next) => {
 app.listen(port, console.log(`Runing on port ${port}`))
 
 
-
+console.log("checking");
