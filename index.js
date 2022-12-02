@@ -1,3 +1,4 @@
+//Author:Poovarasan
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path')
@@ -12,6 +13,8 @@ app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'view'))
 app.use(express.static('public'))
+
+console.log("QR Code generator");
 
 app.get('/', (req, res, next) => {
     res.render(`index`)
@@ -32,4 +35,3 @@ app.post('/scan', (req, res, next) => {
 app.listen(port, console.log(`Runing on port ${port}`))
 
 
-console.log("checking");
