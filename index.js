@@ -1,3 +1,4 @@
+//Author:Poovarasan
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path')
@@ -8,7 +9,7 @@ const port = process.env.port || 4000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-
+console.log(`QR Code generator`)
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'view'))
 app.use(express.static('public'))
